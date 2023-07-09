@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e1dfdd;
+  color: rgb(66, 54, 54);
+  overflow-x: hidden;
+}
+
+@media (max-width: 880px) {
+  body h1 {
+    font-size: 3rem;
+  }
+  body #intro .about-me {
+    padding: 1rem 0 0 1rem;
+  }
+  body #intro .social {
+    padding-left: 1rem;
+    padding-top: 0;
+  }
+  body #intro .title {
+    margin-right: 1rem;
+  }
+  body #intro .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 50%;
+    margin-top: 10rem;
+    scale: 0.8;
+  }
+  body #intro .menu .link2 {
+    grid-column: 1;
+  }
+  body #contact {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  body #contact .about_me {
+    width: fit-content;
+  }
+  body #contact .about_me .rotate_pic {
+    bottom: -35px;
+    right: -35px;
+    scale: 0.8;
+  }
+}
+@media (max-width: 520px) {
+  body #intro .social {
+    min-width: 50vw;
+  }
+  body #intro .social .platforms {
+    gap: 0;
+    align-items: start;
+    padding-bottom: 1rem;
+    flex-direction: column;
+  }
+  body #intro #mainNav .menu {
+    max-width: 140px;
+  }
+  body #work .w_intro {
+    margin-left: 1rem;
+  }
+  body #contact {
+    margin: 4rem 0;
+    gap: 3rem;
+  }
+  body #contact .about_me .rotate_pic {
+    bottom: -40px;
+    right: -40px;
+    scale: 0.7;
+  }
+}
+@media (max-width: 320px) {
+  body h1 {
+    font-size: 2rem;
+  }
+  body h4 {
+    font-size: revert;
+  }
+  body #intro p {
+    font-size: 14px;
+  }
+  body #intro .social .platforms i {
+    font-size: 2rem;
+  }
+  body #mainNav .menu {
+    scale: 0.6;
+  }
+  body #work .w_intro h3 {
+    font-size: 1.5rem;
+  }
+  body #work .projects .project {
+    height: 80vh;
+    height: 80svh;
+  }
+  body #work .projects .project img {
+    height: auto;
+  }
+  body #emailForm form button {
+    width: 50%;
+  }
+}
+.Toastify__progress-bar-theme--dark {
+  background: rgb(78, 152, 55);
+}
+
+.Toastify__toast-theme--dark {
+  background: rgb(66, 54, 54);
+  color: #e1dfdd;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+section {
+  height: 100vh;
+  height: 100svh;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mainNav {
+  display: flex;
+  justify-content: center;
+}
+#mainNav .menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  max-width: 336px;
+  height: 85%;
+}
+#mainNav .menu :nth-child(1) {
+  position: relative;
+}
+#mainNav .menu :nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+  position: relative;
+}
+#mainNav .menu a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(66, 54, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainNav .menu a span {
+  transition: 1s;
+  margin: 0 6px;
+}
+#mainNav .menu .link1 a::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: rgb(219, 45, 72);
+}
+#mainNav .menu .link1 .arrow {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid rgb(66, 54, 54);
+  border-right: 3px solid rgb(66, 54, 54);
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 25px;
+  left: 22px;
+  transition: 1s;
+  z-index: 1;
+  pointer-events: none;
+}
+#mainNav .menu .link1 .arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgb(66, 54, 54);
+  transform: rotate(-45deg);
+  left: 7px;
+  top: 9px;
+  pointer-events: none;
+  transition: 1s;
+}
+#mainNav .menu .link1:hover a span {
+  transform: translateX(18px);
+}
+#mainNav .menu .link1:hover a::before {
+  filter: brightness(0.9);
+}
+#mainNav .menu .link1:hover .arrow {
+  left: 55px;
+}
+#mainNav .menu .link1:hover .arrow::before {
+  width: 25px;
+  left: -4px;
+  top: 7px;
+}
+#mainNav .menu .link2 a::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: rgb(219, 45, 72);
+}
+#mainNav .menu .link2 .arrow {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid rgb(66, 54, 54);
+  border-left: 3px solid rgb(66, 54, 54);
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 25px;
+  right: 0;
+  transition: 1s;
+  z-index: 1;
+  pointer-events: none;
+}
+#mainNav .menu .link2 .arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgb(66, 54, 54);
+  transform: rotate(-45deg);
+  left: 7px;
+  top: 9px;
+  pointer-events: none;
+  transition: 1s;
+}
+#mainNav .menu .link2:hover a span {
+  transform: translateX(-18px);
+}
+#mainNav .menu .link2:hover a::after {
+  filter: brightness(0.9);
+}
+#mainNav .menu .link2:hover .arrow {
+  right: 35px;
+}
+#mainNav .menu .link2:hover .arrow::after {
+  width: 25px;
+  left: -4px;
+  top: 7px;
+}
+
+#intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+#intro .about-me {
+  width: 50vw;
+  padding: 3rem 0 0 3rem;
+}
+#intro .about-me p {
+  margin-top: 3rem;
+  width: 80%;
+  min-width: 141px;
+}
+#intro .social {
+  min-width: 50vw;
+  max-width: 40vw;
+  position: relative;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  z-index: 1;
+}
+#intro .social .platforms {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: start;
+}
+#intro .social .platforms :nth-child(3) {
+  padding-left: 4px;
+}
+#intro .social .platforms :nth-child(3) a {
+  position: relative;
+}
+#intro .social .platforms :nth-child(3) a::after {
+  content: "CV";
+  font-size: 1rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 60%);
+}
+#intro .social .platforms a {
+  font-size: 3rem;
+  cursor: pointer;
+  color: rgb(66, 54, 54);
+  transition: all 0.5s;
+}
+#intro .social .platforms a:hover {
+  color: rgb(219, 45, 72);
+}
+#intro .title {
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+#intro .title .name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#intro .title h4 {
+  text-align: right;
+}
+#intro .title h1 {
+  text-align: right;
+}
+#intro #topBtn {
+  transition: all 0.5s ease-out;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  color: rgb(219, 45, 72);
+  cursor: pointer;
+  z-index: 1000;
+}
+#intro #topBtn :hover {
+  scale: 1.3;
+}
+
+#work {
+  height: 100%;
+}
+#work .w_intro {
+  margin-top: 4rem;
+  margin-left: 3rem;
+}
+#work .w_intro h6 {
+  color: rgb(219, 45, 72);
+}
+#work .w_intro span {
+  font-family: "Lobster Two", cursive;
+}
+#work .projects {
+  margin-top: 3rem;
+  padding: 0;
+}
+#work .projects .project {
+  box-shadow: 0 0 16px 4px rgb(78, 152, 55);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 22px;
+  height: 50vh;
+  height: 65svh;
+  width: clamp(255px, 80%, 1400px);
+  margin: 3rem auto;
+}
+#work .projects .project .lang {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  font-weight: 500;
+}
+#work .projects .project .proj_info {
+  width: clamp(255px, 100%, 400px);
+  display: grid;
+  height: 50%;
+  align-items: center;
+  text-align: center;
+}
+#work .projects .project .proj_info .project-about {
+  width: 74%;
+  margin: 0 auto;
+}
+#work .projects .project .siteBtn {
+  text-decoration: none;
+  margin: 0 8px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #e1dfdd;
+  color: rgb(66, 54, 54);
+  transition: all 0.2s ease-in;
+  font-weight: 700;
+}
+#work .projects .project .siteBtn:hover {
+  color: #e1dfdd;
+  background-color: rgb(219, 45, 72);
+  cursor: pointer;
+}
+#work .projects img {
+  width: clamp(225px, 50%, 70vw);
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+#contact {
+  color: rgb(66, 54, 54);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+#contact .about_me {
+  width: 50%;
+  display: grid;
+  position: relative;
+  justify-content: start;
+}
+#contact .about_me img {
+  width: clamp(225px, 40vw, 604px);
+  border-radius: 20px;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+#contact .about_me .rotate_pic {
+  min-height: 10vh;
+  grid-column: 2/3;
+  grid-row: 2;
+  position: absolute;
+  bottom: -25px;
+  right: -35px;
+}
+#contact .about_me .rotate_pic .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #e1dfdd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .about_me .rotate_pic .circle .logo {
+  position: absolute;
+  border-radius: 50%;
+  font-size: 3rem;
+}
+#contact .about_me .rotate_pic .circle .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10s linear infinite;
+}
+#contact .about_me .rotate_pic .circle .text span {
+  position: absolute;
+  left: 50%;
+  font-weight: 500;
+  transform-origin: 0 75px;
+}
+#contact #emailForm {
+  width: clamp(226px, 40vw, 556px);
+}
+#contact #emailForm h4 {
+  font-size: calc(1rem + 0.3vw);
+}
+#contact #emailForm form {
+  display: flex;
+  flex-direction: column;
+}
+#contact #emailForm form label {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+#contact #emailForm form label span {
+  font-size: 0.8rem;
+}
+#contact #emailForm form input {
+  border-radius: 5px;
+  height: 2.3rem;
+  padding: 0 5px;
+}
+#contact #emailForm form #msg {
+  border-radius: 5px;
+  resize: none;
+  padding: 5px;
+  border: 2px solid;
+  overflow: auto;
+}
+#contact #emailForm form textarea {
+  cursor: auto;
+}
+#contact #emailForm form #msg::-webkit-scrollbar {
+  width: 1rem;
+}
+#contact #emailForm form #msg::-webkit-scrollbar-track {
+  background-color: rgb(235, 227, 240);
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+#contact #emailForm form #msg::-webkit-scrollbar-thumb {
+  background: rgb(219, 45, 72);
+  border-radius: 100vw;
+}
+#contact #emailForm form #msg::-webkit-scrollbar-thumb:hover {
+  background: rgb(78, 152, 55);
+}
+#contact #emailForm form button {
+  margin-top: 1rem;
+  background-color: rgb(219, 45, 72);
+  color: #e1dfdd;
+  border-radius: 5px;
+  border: none;
+}
+#contact #emailForm form button:hover {
+  background-color: rgb(78, 152, 55);
+}
+
+footer {
+  display: grid;
+  place-items: center;
+}
+footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+footer::before {
+  content: "";
+  width: 100%;
+  background-color: rgb(78, 152, 55);
+  grid-column: 1/2;
+  height: 35px;
+  border-top-right-radius: 45px;
+}
+
+footer::after {
+  content: "";
+  width: 100%;
+  background-color: rgb(78, 152, 55);
+  grid-column: 3/4;
+  height: 35px;
+  border-top-left-radius: 45px;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}/*# sourceMappingURL=index.css.map */

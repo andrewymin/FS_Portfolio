@@ -1,0 +1,179 @@
+@media (max-width: 880px) { // medium screen
+    body {
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        #intro {
+    
+            .about-me {
+                 padding: 1rem 0 0 1rem;
+            }
+
+            .social {
+                padding-left: 1rem;
+                // min-width: 210px;
+                padding-top: 0;
+
+            }
+
+            .title {
+                margin-right: 1rem;
+            }
+
+        }
+
+        #intro {
+
+            .menu {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                height: 50%;
+                margin-top: 10rem;
+                scale: .8;
+
+                .link2 {
+                    grid-column: 1;
+                }
+            }
+
+        }
+        
+        #contact {
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .about_me {
+                width: fit-content;
+
+                .rotate_pic {
+                    bottom: -35px;
+                    right: -35px;
+                    scale: 0.8;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 520px) { // mobile screen
+
+    body {
+        #intro {
+
+            // .menu {
+            //     max-width: 140px;
+            // }
+
+            .social{
+                min-width: 50vw;
+
+                .platforms {
+                    gap: 0;
+                    align-items: start;
+                    padding-bottom: 1rem;
+                    flex-direction: column;
+                }
+            }
+
+            #mainNav {
+                .menu {
+                    max-width: 140px;
+                }
+            }
+
+        }
+        #work {
+
+            .w_intro {
+                margin-left: 1rem;
+            }
+        }
+
+        #contact {
+            margin: 4rem 0;
+            gap: 3rem;
+
+            .about_me {
+
+                .rotate_pic {
+                    bottom: -40px;
+                    right: -40px;
+                    scale: 0.7;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 320px) { // extra small mobile screen 320
+
+    body {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-size: revert;
+        }
+
+        #intro {
+
+            p {
+                font-size: 14px;
+            }
+
+            .social {
+                // min-width: 50vw;
+
+                .platforms {
+
+                    i {
+                       font-size: 2rem; 
+                    }
+                }
+            }
+        }
+
+        #mainNav {
+            .menu {
+                // max-width: 140px;
+                scale: 0.6;
+            }
+        }
+
+        #work {
+
+            .w_intro {
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+            .projects {
+                .project {
+                    height: 80vh;
+                    height: 80svh;
+
+                    img {
+                        height: auto;
+                    }
+                }  
+            }
+          
+        }
+
+        #emailForm{
+            form {
+                button {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+}
